@@ -1,4 +1,4 @@
-name: Deployment
+name: Deploy Project
 on: [push, wokflow_dispatch]
 jobs:
   test:
