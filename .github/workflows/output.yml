@@ -7,5 +7,10 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps:
-      - name: Output GitHub context
-        run: echo "${{ toJSON(github) }}"
+      - name: Display issue details
+        run: |
+          echo "A new issue has been opened!"
+          echo "Issue Title: ${{ github.event.issue.title }}"
+          echo "Issue Number: ${{ github.event.issue.number }}"
+          echo "Issue URL: ${{ github.event.issue.html_url }}"
+          echo "Issue Body: ${{ github.event.issue.body }}"
